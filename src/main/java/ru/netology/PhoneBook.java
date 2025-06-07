@@ -1,5 +1,6 @@
 package ru.netology;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
@@ -23,4 +24,10 @@ public class PhoneBook {
         }
         return nameToNumber.size();    }
 
-        }
+public List<String> printAllNames() {
+    for (String name : sortedNames) {
+        System.out.println(name);
+    }
+    return null;
+}
+}
