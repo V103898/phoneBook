@@ -16,7 +16,7 @@ public class PhoneBook {
     }
 
     public String findByName(String name) {
-        return nameToNumber.get(name);
+        return null;
     }
 
     public int add(String name, String number) {
