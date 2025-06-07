@@ -1,13 +1,9 @@
 import org.junit.jupiter.api.Test;
 import ru.netology.PhoneBook;
-
 import java.util.List;
-import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.*;
-
-
 public class PhoneBookTest {
     @Test
     public void testAddSingleContact() {
@@ -49,7 +45,7 @@ public class PhoneBookTest {
         phoneBook.add("ApTyp", "789");
 
         List<String> names = phoneBook.printAllNames();
-        assertEquals(List.of("AHHA", "BoBa", "ApTyp"), names);
+        assertEquals(List.of("AHHA", "ApTyp", "BoBa"), names);
     }
 
     @Test

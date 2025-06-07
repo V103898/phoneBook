@@ -3,15 +3,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
+import java.util.ArrayList;
 
 public class PhoneBook {
 
     private final Map<String, String> nameToNumber = new HashMap<>();
     private final Map<String, String> numberToName = new HashMap<>();
     private final TreeSet<String> sortedNames = new TreeSet<>();
+
     public String findByNumber(String number) {
         return numberToName.get(number);
     }
+
     public String findByName(String name) {
         return nameToNumber.get(name);
     }
@@ -22,12 +25,10 @@ public class PhoneBook {
             numberToName.put(number, name);
             sortedNames.add(name);
         }
-        return nameToNumber.size();    }
-
-public List<String> printAllNames() {
-    for (String name : sortedNames) {
-        System.out.println(name);
+        return nameToNumber.size();
     }
-    return null;
-}
-}
+
+    public List<String> printAllNames() {
+        return new ArrayList<>(sortedNames);
+    }
+        }
