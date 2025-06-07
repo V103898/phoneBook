@@ -15,6 +15,6 @@ public class PhoneBook {
             numberToName.put(number, name);
             sortedNames.add(name);
         }
-        return 0;    }
+        return nameToNumber.size();    }
 
         }
